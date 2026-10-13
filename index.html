@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">🎓</div>
+      <h1>Student Marks Calculator</h1>
+      <p>Calculate total marks, percentage, grade, and result.</p>
+    </header>
+
+    <section class="card">
+      <form id="marksForm">
+        <label for="studentName">Student name</label>
+        <input id="studentName" type="text" placeholder="Enter student name" required>
+
+        <label for="subjectCount">Number of subjects</label>
+        <select id="subjectCount">
+          <option value="3">3 subjects</option>
+          <option value="4">4 subjects</option>
+          <option value="5" selected>5 subjects</option>
+          <option value="6">6 subjects</option>
+          <option value="7">7 subjects</option>
+          <option value="8">8 subjects</option>
+        </select>
+
+        <div id="subjectInputs" class="subjects"></div>
+        <button type="submit">Calculate Result</button>
+        <button type="button" id="resetButton" class="secondary">Reset</button>
+      </form>
+    </section>
+
+    <section id="result" class="card result hidden" aria-live="polite">
+      <h2>📊 Result Summary</h2>
+      <p id="resultName"></p>
+      <div class="stats">
+        <div><span>Total Marks</span><strong id="totalMarks">0</strong></div>
+        <div><span>Percentage</span><strong id="percentage">0%</strong></div>
+        <div><span>Grade</span><strong id="grade">—</strong></div>
+        <div><span>Status</span><strong id="status">—</strong></div>
+      </div>
+      <p class="note">Each subject is out of 100. Passing requires at least 35 marks in every subject.</p>
+    </section>
+
+    <footer>Student Marks Calculator · HTML, CSS & JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
